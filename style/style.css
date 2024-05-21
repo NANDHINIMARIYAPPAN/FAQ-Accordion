@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Work Sans';
+    src: url(../assets/fonts/static/WorkSans-Regular.ttf);
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+    --font-family: 'Work Sans', serif;
+    --font-size: 16px;
+}
+
+.container-fluid {
+    height: 100vh;
+    background: url(../assets/images/background-pattern-desktop.svg) no-repeat hsl(275, 100%, 97%);
+    background-size: contain;
+    font-family: var(--font-family);
+    font-size: var(--font-size)
+}
+
+.row {
+    height: 100%;
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.accordion-item {
+    border: none !important;
+}
+
+.accordion-button.collapsed::after {
+    background-image: url("../assets/images/icon-plus.svg");
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("../assets/images/icon-minus.svg");
+}
+
+.accordion-button:not(.collapsed) {
+    background: none !important;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+h1{
+    font-weight: 700;
+    color: var(--Dark-purple);
+    /* font-size: 2.5rem;    */
+}
+.accordion-button{
+    font-weight: 700;
+    color: var(--Dark-purple);
+    font-size: 1rem;
+}
+.accordion-button:not(.collapsed){
+    font-weight: 700;
+    color: var(--Dark-purple);
+    font-size: 1rem;
+}
+.accordion-body{
+    color: var(--Grayish-purple);
+    font-size: 1rem;
+
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+      background: url(../assets/images/background-pattern-mobile.svg) no-repeat hsl(275, 100%, 97%);
+      background-size: contain;
+    }
+  }
